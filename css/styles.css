@@ -1,0 +1,255 @@
+:root {
+  --main-color: #f5f5f5;
+  --secondary-color: #2f303a;
+  --accent-color: #f5f4fa;
+  --main-text-color: #757575;
+  --text-color: #212121;
+  --text-color-second: #ffffff;
+}
+
+body {
+  font-family: "Roboto", Raleway;
+  color: var(--text-color);
+  background-color: var(--main-color);
+}
+
+header {
+  background-color: var(--text-color-second);
+}
+
+.name {
+  text-decoration: none;
+}
+
+.name-first,
+.name-second,
+.name-third {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+}
+
+.name-first {
+  color: #2196f3;
+}
+
+.name-second {
+  color: #000000;
+}
+
+.name-third {
+  color: var(--text-color-second);
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+}
+
+.nav-link:hover,
+.header-contacts:hover {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+  background-color: var(--accent-color);
+}
+
+.nav-link:focus,
+.header-contacts:focus,
+button:focus,
+.adress-location:focus,
+.adress-link:focus {
+  background: #2196f3;
+  color: var(--text-color-second);
+}
+
+.nav-contacts {
+  list-style: none;
+}
+
+.header-contacts {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+}
+
+.solutions {
+  background-color: var(--secondary-color);
+}
+
+.name-solution {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: calc(60 / 44);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-color-second);
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #2196f3;
+  color: #ffffff;
+}
+
+.benefit-list {
+  list-style: none;
+}
+
+.benefit-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.benefit-title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+.functions {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+.functions-list {
+  list-style: none;
+}
+
+.team {
+  background-color: var(--accent-color);
+}
+
+.team-block {
+  background-color: var(--text-color-second);
+}
+
+.team-name {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+.team-list {
+  list-style: none;
+}
+
+.teammate-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+.teammate-specialization {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+footer {
+  background-color: var(--secondary-color);
+}
+
+.adress-list {
+  list-style: none;
+}
+
+.adress-location {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: var(--text-color-second);
+}
+
+.adress-link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.adress-location:hover,
+.adress-link:hover {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+  color: #2196f3;
+}
+
+.projects-list {
+  list-style: none;
+}
+
+.project-block {
+  background-color: var(--text-color-second);
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+  color: var(--text-color);
+}
+
+.project-description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
