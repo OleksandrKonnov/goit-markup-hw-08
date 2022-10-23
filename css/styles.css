@@ -8,9 +8,9 @@
 }
 
 body {
-  font-family: "Roboto", Raleway;
+  font-family: "Roboto", sans-serif;
   color: var(--text-color);
-  background-color: var(--main-color);
+  background-color: var(--text-color-second);
 }
 
 header {
@@ -24,9 +24,7 @@ header {
 .name-first,
 .name-second,
 .name-third {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 700;
+  font-family: sans-serif;
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
@@ -66,23 +64,37 @@ header {
   color: #2196f3;
 }
 
+.active-link {
+  color: #2196f3;
+}
+
 button {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: calc(26 / 16);
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--text-color);
-  background-color: var(--accent-color);
+  font-family: inherit;
+}
+
+.button-booking {
+  width: 216px;
+  height: 50px;
+  left: 692px;
+  top: 430px;
+  color: var(--text-color-second);
+  background: #2196f3;
+}
+
+.button-booking:hover,
+.button-booking:focus {
+  background: #188ce8;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 .nav-link:focus,
 .header-contacts:focus,
-button:focus,
 .adress-location:focus,
 .adress-link:focus {
-  background: #2196f3;
-  color: var(--text-color-second);
+  color: #2196f3;
 }
 
 .nav-contacts {
@@ -112,18 +124,11 @@ button:focus,
   color: var(--text-color-second);
 }
 
-.button:hover {
-  cursor: pointer;
-  background: #2196f3;
-  color: #ffffff;
-}
-
 .benefit-list {
   list-style: none;
 }
 
 .benefit-name {
-  font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.03em;
@@ -132,7 +137,6 @@ button:focus,
 }
 
 .benefit-title {
-  font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
@@ -140,7 +144,6 @@ button:focus,
 }
 
 .functions {
-  font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
@@ -161,7 +164,6 @@ button:focus,
 }
 
 .team-name {
-  font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
@@ -183,7 +185,6 @@ button:focus,
 }
 
 .teammate-specialization {
-  font-weight: 400;
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
@@ -202,7 +203,6 @@ footer {
 .adress-location {
   text-decoration: none;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
@@ -212,7 +212,6 @@ footer {
 .adress-link {
   text-decoration: none;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
@@ -223,15 +222,33 @@ footer {
 .adress-link:hover {
   text-decoration: none;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: #2196f3;
 }
 
-.projects-list {
+.projects-list,
+.projects-nav {
   list-style: none;
+}
+
+.button-projects {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+.button-projects:hover,
+.button-projects:focus {
+  height: 38px;
+  left: 512px;
+  top: 174px;
+  background: #2196f3;
+  color: var(--text-color-second);
 }
 
 .project-block {
@@ -239,7 +256,6 @@ footer {
 }
 
 .project-title {
-  font-weight: 700;
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
@@ -247,7 +263,6 @@ footer {
 }
 
 .project-description {
-  font-weight: 400;
   font-size: 16px;
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
