@@ -24,7 +24,8 @@ header {
 .name-first,
 .name-second,
 .name-third {
-  font-family: sans-serif;
+  font-family: Raleway;
+  font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
@@ -73,10 +74,11 @@ button {
 }
 
 .button-booking {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
   width: 216px;
   height: 50px;
-  left: 692px;
-  top: 430px;
   color: var(--text-color-second);
   background: #2196f3;
 }
@@ -233,6 +235,10 @@ footer {
   list-style: none;
 }
 
+.project-link {
+  text-decoration: none;
+}
+
 .button-projects {
   font-weight: 500;
   font-size: 16px;
@@ -244,9 +250,6 @@ footer {
 
 .button-projects:hover,
 .button-projects:focus {
-  height: 38px;
-  left: 512px;
-  top: 174px;
   background: #2196f3;
   color: var(--text-color-second);
 }
