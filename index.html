@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>web studio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,68 +20,79 @@
   <body>
     <header>
       <!-- navigation -->
-      <a class="name" href="./index.html"
-        ><span class="name-first">Web</span>
-        <span class="name-second">Studio</span></a
-      >
-      <nav>
-        <ul class="nav-list">
-          <li>
-            <a class="nav-link active-link" href="#">Студія</a>
-          </li>
-          <li>
-            <a class="nav-link" href="./portfolio.html">Портфоліо</a>
-          </li>
-          <li>
-            <a class="nav-link" href="#">Контакти</a>
-          </li>
-        </ul>
-      </nav>
-      <ul class="nav-contacts">
-        <li>
-          <a class="header-contacts" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li>
-          <a class="header-contacts" href="tel:+380961111111"
-            >+38 096 111 11 11</a
-          >
-        </li>
-      </ul>
+      <div class="container">
+        <a class="name" href="./index.html"
+          ><span class="name-first">Web</span>
+          <span class="name-second">Studio</span></a
+        >
+        <div class="header-nav">
+          <nav>
+            <ul class="nav-list">
+              <li class="nav-list-item">
+                <a class="nav-link active-link" href="#">Студія</a>
+              </li>
+              <li class="nav-list-item">
+                <a class="nav-link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="nav-list-item">
+                <a class="nav-link" href="#">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-nav-contacts">
+          <ul class="nav-contacts">
+            <li class="nav-contacts-list">
+              <a class="header-contacts" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li class="nav-contacts-list">
+            <li>
+              <a class="header-contacts" href="tel:+380961111111"
+                >+38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <main>
       <!-- main information -->
       <section class="solutions">
-        <h1 class="name-solution">Ефективні рішення для вашого бізнесу</h1>
-        <button class="button-booking button" type="button">
+    <!-- <div class="container"> -->
+        <div class="solutions-box">
+          <h1 class="name-solution">Ефективні рішення для вашого бізнесу</h1>
+          <button class="button-booking button" type="button">
           Замовити послугу
         </button>
+      </div>
+    <!-- </div> -->
       </section>
       <section class="benefits">
-        <h2 hidden>Наші переваги</h2>
+     <h2 hidden>Наші переваги</h2>
+      <div class="container">
         <ul class="benefit-list">
-          <li>
+             <li class="benefit-item">
             <h3 class="benefit-name">УВАГА ДО ДЕТАЛЕЙ</h3>
             <p class="benefit-title">
               Ідейні міркування, і навіть початок повсякденної роботи з
               формування позиції.
             </p>
           </li>
-          <li>
+            <li class="benefit-item">
             <h3 class="benefit-name">ПУНКТУАЛЬНІСТЬ</h3>
             <p class="benefit-title">
               Завдання організації, особливо рамки і місце навчання кадрів тягне
               у себе.
             </p>
           </li>
-          <li>
+            <li class="benefit-item">
             <h3 class="benefit-name">ПЛАНУВАННЯ</h3>
             <p class="benefit-title">
               Так само консультація з широким активом значною мірою зумовлює.
             </p>
           </li>
-          <li>
+           <li class="benefit-item">
             <h3 class="benefit-name">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
             <p class="benefit-title">
               Значимість цих проблем настільки очевидна, що реалізація планових
@@ -85,11 +100,15 @@
             </p>
           </li>
         </ul>
+      </div>      
       </section>
       <section>
-        <h2 class="functions">Чим ми займаємося</h2>
+                
+        <div class="functions-box">
+          <h2 class="functions">Чим ми займаємося</h2>
+
         <ul class="functions-list">
-          <li>
+          <li class="functions-imgs">
             <img
               src="./images/device1.jpg"
               alt="device1"
@@ -97,7 +116,7 @@
               height="294"
             />
           </li>
-          <li>
+          <li class="functions-imgs">
             <img
               src="./images/device2.jpg"
               alt="device2"
@@ -105,7 +124,7 @@
               height="294"
             />
           </li>
-          <li>
+          <li class="functions-imgs">
             <img
               src="./images/device3.jpg"
               alt="device3"
@@ -114,10 +133,13 @@
             />
           </li>
         </ul>
+        </div>
       </section>
       <!-- team -->
       <section class="team">
-        <h2 class="team-name">Наша команда</h2>
+        
+        <div class="team-box">
+          <h2 class="team-name">Наша команда</h2>
         <ul class="team-list">
           <li class="team-block">
             <img
@@ -160,28 +182,31 @@
             <p class="teammate-specialization">UI Designer</p>
           </li>
         </ul>
+        </div>
+        
       </section>
     </main>
     <footer>
-      <a class="name" href="./index.html"
+      <div class="name-box"> <a class="name" href="./index.html"
         ><span class="name-first">Web</span>
         <span class="name-third">Studio</span></a
-      >
+      ></div>
+       
       <address>
         <ul class="adress-list">
-          <li>
+          <li class="adress-type">
             <a
               class="adress-location"
               href="https://goo.gl/maps/uJihwq9PoKoh5fedA"
               >м. Київ, пр-т Лесі Українки, 26</a
             >
           </li>
-          <li>
+          <li class="adress-type">
             <a class="adress-link" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="adress-type">
             <a class="adress-link" href="tel:+380961111111"
               >+38 096 111 11 11</a
             >
