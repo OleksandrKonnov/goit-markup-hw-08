@@ -25,7 +25,6 @@
           ><span class="name-first">Web</span>
           <span class="name-second">Studio</span></a
         >
-        <div class="header-nav">
           <nav>
             <ul class="nav-list">
               <li class="nav-list-item">
@@ -39,8 +38,9 @@
               </li>
             </ul>
           </nav>
-        </div>
-        <div class="header-nav-contacts">
+        
+          
+        
           <ul class="nav-contacts">
             <li class="nav-contacts-list">
               <a class="header-contacts" href="mailto:info@devstudio.com"
@@ -53,25 +53,26 @@
               >
             </li>
           </ul>
-        </div>
+        
       </div>
     </header>
     <main>
       <!-- main information -->
       <section class="solutions">
     <!-- <div class="container"> -->
-        <div class="solutions-box">
+      <div class="container">
           <h1 class="name-solution">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button-booking button" type="button">
+        <button class="button-booking button" type="button">
           Замовити послугу
         </button>
       </div>
     <!-- </div> -->
       </section>
       <section class="benefits">
-     <h2 hidden>Наші переваги</h2>
-      <div class="container">
-        <ul class="benefit-list">
+        <div class="container">
+          <h2 hidden>Наші переваги</h2>
+      
+        <ul class="benefit-list list">
              <li class="benefit-item">
             <h3 class="benefit-name">УВАГА ДО ДЕТАЛЕЙ</h3>
             <p class="benefit-title">
@@ -102,12 +103,12 @@
         </ul>
       </div>      
       </section>
-      <section>
+      <section class="functions-main">
                 
-        <div class="functions-box">
+        <div class="container">
           <h2 class="functions">Чим ми займаємося</h2>
 
-        <ul class="functions-list">
+        <ul class="functions-list list">
           <li class="functions-imgs">
             <img
               src="./images/device1.jpg"
@@ -138,9 +139,9 @@
       <!-- team -->
       <section class="team">
         
-        <div class="team-box">
+        <div class="container">
           <h2 class="team-name">Наша команда</h2>
-        <ul class="team-list">
+        <ul class="team-list list">
           <li class="team-block">
             <img
               src="./images/person1.jpg"
@@ -148,8 +149,8 @@
               width="270"
               height="260"
             />
-            <h3 class="teammate-name">Ігор Дем'яненко</h3>
-            <p class="teammate-specialization">Product Designer</p>
+            <div class="team-name"><h3 class="teammate-name">Ігор Дем'яненко</h3></div>
+            <div class="team-specialization"><p class="teammate-specialization">Product Designer</p></div>
           </li>
           <li class="team-block">
             <img
@@ -158,8 +159,8 @@
               width="270"
               height="260"
             />
-            <h3 class="teammate-name">Ольга Рєпіна</h3>
-            <p class="teammate-specialization">Frontend Developer</p>
+            <div class="team-name"><h3 class="teammate-name">Ольга Рєпіна</h3></div>
+            <div class="team-specialization"><p class="teammate-specialization">Frontend Developer</p></div>
           </li>
           <li class="team-block">
             <img
@@ -168,8 +169,8 @@
               width="270"
               height="260"
             />
-            <h3 class="teammate-name">Микола Тарасов</h3>
-            <p class="teammate-specialization">Marketing</p>
+            <div class="team-name"><h3 class="teammate-name">Микола Тарасов</h3></div>
+            <div class="team-specialization"><p class="teammate-specialization">Marketing</p></div>
           </li>
           <li class="team-block">
             <img
@@ -178,8 +179,8 @@
               width="270"
               height="260"
             />
-            <h3 class="teammate-name">Михайло Єрмаков</h3>
-            <p class="teammate-specialization">UI Designer</p>
+            <div class="team-name"><h3 class="teammate-name">Михайло Єрмаков</h3></div>
+            <div class="team-specialization"><p class="teammate-specialization">UI Designer</p></div>
           </li>
         </ul>
         </div>
@@ -187,13 +188,13 @@
       </section>
     </main>
     <footer>
-      <div class="name-box"> <a class="name" href="./index.html"
+      <div class="container"> <a class="name" href="./index.html"
         ><span class="name-first">Web</span>
         <span class="name-third">Studio</span></a
-      ></div>
+      >
        
       <address>
-        <ul class="adress-list">
+        <ul class="adress-list list">
           <li class="adress-type">
             <a
               class="adress-location"
@@ -212,7 +213,9 @@
             >
           </li>
         </ul>
+        
       </address>
+      </div>
     </footer>
   </body>
 </html>
