@@ -130,6 +130,8 @@ header .name {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--text-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover {
@@ -143,10 +145,8 @@ header .name {
 .header-contacts .icon {
   margin-right: 10px;
   fill: currentColor;
-}
-
-.header-contacts:hover {
-  color: #2196f3;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts:hover {
@@ -155,6 +155,28 @@ header .name {
 
 .active-link {
   color: #2196f3;
+}
+
+/* .active-link::after {
+  display: inline-block;
+  content: none;
+  position: absolute;
+  margin-bottom: 44px;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+} */
+
+.active-link::after {
+  display: flex;
+  content: " ";
+  position: absolute;
+  height: 4px;
+  width: 48px;
+  background-color: #2196f3;
+  top: 78px;
+  border-radius: 2px;
 }
 
 button {
@@ -169,14 +191,20 @@ button {
   height: 50px;
   color: var(--text-color-second);
   background: #2196f3;
+  border-radius: 4px;
+  border: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-booking:hover,
 .button-booking:focus {
   background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.button:hover {
+.button:hover,
+.button-booking:focus {
   cursor: pointer;
 }
 
@@ -212,6 +240,8 @@ button {
     url(../images/background.jpg);
   background-color: #2f303a66;
   background-size: cover;
+  max-width: 1600px;
+  height: 600px;
 }
 
 .solutions {
@@ -230,13 +260,6 @@ button {
   width: 696px;
   margin: 0 auto;
   margin-bottom: 40px;
-}
-
-.button-booking {
-  width: 216px;
-  height: 50px;
-  border-radius: 4px;
-  border: none;
 }
 
 .benefits {
@@ -295,6 +318,11 @@ button {
   gap: 30px;
 }
 
+.functions-pic {
+  position: relative;
+  width: 100%;
+}
+
 .functions {
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -306,6 +334,27 @@ button {
 
 .functions-list {
   list-style: none;
+}
+
+.functions-description {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 370px;
+  height: 70px;
+  top: 1432px;
+  background: rgba(47, 48, 58, 0.8);
+  align-items: center;
+}
+
+.functions-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-color-second);
 }
 
 .team {
@@ -340,6 +389,8 @@ button {
   height: 44px;
   margin-right: 10px;
   border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -365,6 +416,8 @@ button {
 .social-link:focus {
   background: #2196f3;
   border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:focus .social-icon {
@@ -440,6 +493,8 @@ button {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-icon {
@@ -479,6 +534,8 @@ footer .container {
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--text-color-second);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-link {
@@ -488,6 +545,8 @@ footer .container {
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-location:hover,
@@ -523,6 +582,8 @@ footer .social-item {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 footer .social-link {
@@ -557,6 +618,8 @@ footer .social-item .social-icon {
   letter-spacing: 0.03em;
   color: var(--text-color);
   padding: 6px 25px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-projects:hover,
@@ -571,6 +634,8 @@ footer .social-item .social-icon {
 .project-block {
   background-color: var(--text-color-second);
   flex-basis: calc((100% - 2 * 30px) / 3);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-title {
@@ -619,14 +684,93 @@ footer .social-item .social-icon {
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
-}
-
-.project-link {
   display: block;
 }
 
-.project-link:hover,
-.project-link:focus {
+/* .project-link {
+  display: block;
+} */
+
+.project-block:hover,
+.project-block:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.projects-block {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-description-text {
+  background-color: rgba(33, 150, 243, 0.9);
+  position: absolute;
+  width: 370px;
+  height: 294px;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  letter-spacing: 0.03em;
+  color: var(--text-color-second);
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  padding: 63px 24px;
+  transform: translateY(0);
+  transition: transform 250ms linear;
+}
+
+.projects-list .project-link:hover .project-description-text {
+  transform: translateY(-100%);
+}
+
+.modal {
+  width: 528px;
+  height: 581px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  transition: transform 1000ms linear;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 500ms, visibility 500ms;
+}
+
+.modal .close-sign {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  left: 490px;
+  right: 8px;
+  top: 8px;
+  bottom: 543px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.icon-close {
+  fill: #000000;
+  background: #ffffff;
 }
