@@ -87,6 +87,9 @@ header .name {
 .header-contacts {
   display: flex;
   align-items: center;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
+  transition-duration: 250ms;
 }
 
 .nav-contacts-list:not(:last-child) {
@@ -124,6 +127,7 @@ header .name {
 }
 
 .nav-link {
+  position: relative;
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
@@ -132,6 +136,7 @@ header .name {
   color: var(--text-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .nav-link:hover {
@@ -145,8 +150,6 @@ header .name {
 .header-contacts .icon {
   margin-right: 10px;
   fill: currentColor;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts:hover {
@@ -157,23 +160,12 @@ header .name {
   color: #2196f3;
 }
 
-/* .active-link::after {
-  display: inline-block;
-  content: none;
-  position: absolute;
-  margin-bottom: 44px;
-  width: 100%;
-  height: 4px;
-  background-color: #2196f3;
-  border-radius: 2px;
-} */
-
 .active-link::after {
   display: flex;
   content: " ";
   position: absolute;
   height: 4px;
-  width: 48px;
+  width: 100%;
   background-color: #2196f3;
   top: 78px;
   border-radius: 2px;
@@ -195,6 +187,7 @@ button {
   border: none;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, box-shadow;
 }
 
 .button-booking:hover,
@@ -389,8 +382,6 @@ button {
   height: 44px;
   margin-right: 10px;
   border-radius: 50%;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon {
@@ -403,21 +394,27 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
 }
 
-.social-item:hover {
+.social-link:hover {
   background: #2196f3;
+  border-radius: 50%;
 }
 
 .social-item .social-link:hover .social-icon {
   fill: #ffffff;
 }
 
+.social-link {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color;
+}
+
 .social-link:focus {
   background: #2196f3;
   border-radius: 50%;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:focus .social-icon {
@@ -495,6 +492,7 @@ button {
   border-radius: 4px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, border;
 }
 
 .company-icon {
@@ -536,6 +534,7 @@ footer .container {
   color: var(--text-color-second);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .adress-link {
@@ -547,6 +546,7 @@ footer .container {
   color: rgba(255, 255, 255, 0.6);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .adress-location:hover,
@@ -605,11 +605,6 @@ footer .social-item .social-icon {
   list-style: none;
 }
 
-.project-link {
-  text-decoration: none;
-  background-color: var(--text-color-second);
-}
-
 .button-projects {
   font-weight: 500;
   font-size: 16px;
@@ -620,6 +615,7 @@ footer .social-item .social-icon {
   padding: 6px 25px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, box-shadow;
 }
 
 .button-projects:hover,
@@ -634,8 +630,6 @@ footer .social-item .social-icon {
 .project-block {
   background-color: var(--text-color-second);
   flex-basis: calc((100% - 2 * 30px) / 3);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-title {
@@ -687,18 +681,22 @@ footer .social-item .social-icon {
   display: block;
 }
 
-/* .project-link {
-  display: block;
-} */
+.project-link {
+  text-decoration: none;
+  background-color: var(--text-color-second);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, background-color, box-shadow;
+}
 
-.project-block:hover,
-.project-block:focus {
+.project-link:hover,
+.project-link:focus {
+  display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.projects-block {
-  display: block;
+.project-description-block {
   position: relative;
   overflow: hidden;
 }
@@ -712,16 +710,14 @@ footer .social-item .social-icon {
   line-height: calc(28 / 18);
   letter-spacing: 0.03em;
   color: var(--text-color-second);
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
   padding: 63px 24px;
   transform: translateY(0);
   transition: transform 250ms linear;
 }
 
-.projects-list .project-link:hover .project-description-text {
+.project-link:hover .project-description-text {
   transform: translateY(-100%);
+  opacity: 1;
 }
 
 .modal {
