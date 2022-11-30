@@ -816,11 +816,10 @@ input {
   transition: opacity 500ms, visibility 500ms;
 }
 
-.modal .close-sign {
+.close-sign {
   position: absolute;
   display: flex;
   justify-content: center;
-  cursor: pointer;
   align-items: center;
   width: 30px;
   height: 30px;
@@ -829,6 +828,7 @@ input {
   top: 8px;
   bottom: 543px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--text-color-second);
   border-radius: 50%;
 }
 
@@ -839,15 +839,15 @@ input {
 }
 
 .icon-close {
-  fill: #212121;
+  fill: currentColor;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: fill;
 }
 
-.icon-close:hover,
-.icon-close:focus {
-  fill: #2196f3;
+.close-sign:hover,
+.close-sign:focus {
+  color: #2196f3;
 }
 
 .form-name {
@@ -946,43 +946,66 @@ input {
   border-radius: 4px;
 }
 
-.form-field {
+.check-line {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 30px;
 }
 
-.check-text {
+.modal-form-checkbox {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  border: 0;
+  flex-shrink: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.modal-form-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid var(--text-color);
+}
+
+.modal-form-icon {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.modal-form-checkbox:checked + .modal-form-custom {
+  background-color: #2196f3;
+  border: 2px solid #2196f3;
+}
+
+.modal-form-checkbox:checked + .modal-form-custom .modal-form-icon {
+  opacity: 1;
+  fill: var(--text-color-second);
+}
+
+.modal-form-text {
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  padding-right: 5px;
+  margin-left: 7px;
 }
 
-.check-link {
+.modal-form-link {
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
   color: #2196f3;
   text-decoration: underline;
-}
-
-.icon-agree {
-  fill: transparent;
-}
-
-.checkbox-agree {
-  cursor: pointer;
-}
-
-.icon-wrapper {
-  width: 16px;
-  height: 15px;
-  border-radius: 2px;
-  border-color: #212121;
 }
 
 .sub-button {
