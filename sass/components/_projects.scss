@@ -1,0 +1,103 @@
+.projects-list,
+.projects-nav {
+    list-style: none;
+}
+
+.project-block {
+    background-color: var(--text-color-second);
+    flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.project-title {
+    font-size: 18px;
+    line-height: calc(36 / 18);
+    letter-spacing: 0.06em;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.project-description {
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.03em;
+    color: var(--main-text-color);
+}
+
+.adress-type:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.projects-main {
+    padding: 94px 0;
+}
+
+.projects-nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
+.button-projects {
+    border-radius: 4px;
+    border: none;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projects-box {
+    padding: 20px 24px;
+    border-left: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    display: block;
+}
+
+.project-link {
+    text-decoration: none;
+    background-color: var(--text-color-second);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, background-color, box-shadow;
+
+    &:hover {
+        display: block;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:focus {
+        display: block;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+
+.project-description-block {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-description-text {
+    background-color: rgba(33, 150, 243, 0.9);
+    position: absolute;
+    width: 370px;
+    height: 294px;
+    font-size: 18px;
+    line-height: calc(28 / 18);
+    letter-spacing: 0.03em;
+    color: var(--text-color-second);
+    padding: 63px 24px;
+    transform: translateY(0);
+    transition: transform 250ms linear;
+}
+
+.project-link:hover .project-description-text {
+    transform: translateY(-100%);
+    opacity: 1;
+}

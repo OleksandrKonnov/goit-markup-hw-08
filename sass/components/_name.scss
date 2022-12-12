@@ -1,0 +1,25 @@
+.name {
+    text-decoration: none;
+}
+
+.name-first,
+.name-second,
+.name-third {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: calc(31 / 26);
+    letter-spacing: 0.03em;
+}
+
+.name-first {
+    color: #2196f3;
+}
+
+.name-second {
+    color: #000000;
+}
+
+.name-third {
+    color: var(--text-color-second);
+}

@@ -1,0 +1,43 @@
+.functions-main {
+    padding-bottom: 94px;
+}
+
+.functions-list {
+    display: flex;
+    gap: 30px;
+}
+
+
+.functions {
+    font-size: 36px;
+    line-height: calc(42 / 36);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--text-color);
+    margin-bottom: 50px;
+}
+
+.functions-list {
+    list-style: none;
+}
+
+.functions-imgs {
+    position: relative;
+}
+
+.functions-description {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 70px;
+    margin-top: -70px;
+    background: rgba(47, 48, 58, 0.8);
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--text-color-second);
+}
