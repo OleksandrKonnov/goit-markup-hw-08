@@ -1,0 +1,25 @@
+.menu-button--toggle {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  & .icon-close {
+    @extend %icons;
+  }
+}
+
+.menu-button {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  transition: fill 250ms $time-function;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
